@@ -32,7 +32,7 @@ function tiMer() {
 
 
 
-  
+
   function countDown() {
     //   this will display the value in html
     displayTimer.textContent = time + " Seconds Remaining";
@@ -57,6 +57,7 @@ function displayQuestion(){
 
 }
 function checkAnswer(){
+  if
 
 }
 
