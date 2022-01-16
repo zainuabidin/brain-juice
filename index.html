@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-    
-</head>
-<body>
-    
-   
-  
+  </head>
+  <body>
+    <button id="myBtn">Start Quiz</button>
+    <h2 id="displayTimer"></h2>
 
-    <button id='myBtn'>Generate Password</button>
-    <h2 id='displayTimer'></h2>
+    
+
+    <div id="questions">
+<h1 id="q"></h1>
+     <button id="op1"></button>
+     <button id="op2"></button>
+     <button id="op3"></button>
+     <button id="op4"></button>
+    </div>
 
     <script src="./index.js"></script>
 
-
-
-   
-    
-</body>
+  </body>
 </html>
 
 
-
-
-
-<!-- 
-GIVEN I am taking a code quiz
+<!-- GIVEN I am taking a code quiz
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
 WHEN I answer a question
