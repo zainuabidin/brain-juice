@@ -20,5 +20,9 @@ GIVEN I am taking a code quiz WHEN I click the start button THEN a timer starts 
 
 
 Deployed link : https://zainuabidin.github.io/brain-juice/
+<<<<<<< HEAD
 
 https://github.com/zainuabidin/brain-juice
+=======
+![zainuabidin github io_brain-juice_](https://user-images.githubusercontent.com/95305672/149683457-a9bd81dd-0d8f-4002-8fa8-31f2c6c13fb3.png)
+>>>>>>> f4fa1672216dcc00eeb91583dd89fdd9f05b1242
