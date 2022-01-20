@@ -18,6 +18,7 @@ const answers =document.querySelectorAll('.answer')
 
 // This is set a 0 to push the array object to next question
 let questionCount=0
+let score=0
 
 
 // on click the variable assigned to id will call the function tiMer to start the countdown
@@ -123,18 +124,23 @@ function loadQuestion (){
 }
 loadQuestion()
 
-function getCheckAnswer(){
+const getCheckAnswer = () => {
 
  let answer;
  answers.forEach((curAnsElem) => {
-   if (curAnsElem.checked) {
-     answer=curAnsElem.id
-     console.log(answer)
+   if(curAnsElem.checked){
+     answer = curAnsElem.id;
      
    }
-   return answer
    
  });
+ return answer;
+     
+     
+  
+   
+   
+ 
 
   
 
@@ -146,6 +152,12 @@ function getCheckAnswer(){
 submit.addEventListener('click' ,function(){
   const checkedAnswer=getCheckAnswer()
   console.log(checkedAnswer)
+  if(checkedAnswer===quizDB[questionCount].correct)
+  score ++;
+  questionCount ++;
+  if(questionCount<quizDB.length)
+   loadQuestion()
+  
 })
 
 
