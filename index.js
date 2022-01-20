@@ -69,25 +69,49 @@ const submit = document.getElementById("submit");
 // Array of object with question and answer
 const quizDB = [
   {
-    question: "Which country produces the most coffee in the world? ",
-    answer1: "Etiopia",
-    answer2: "Columbia",
-    answer3: "Brazil",
-    answer4: "Spain",
-    correct: "Brazil",
+    question: "Which built-in method removes the last element from an array and returns that element? ",
+    answer1: "last()",
+    answer2: "get()",
+    answer3: "pop()",
+    answer4: "None of the above.",
+    correct: "pop",
   },
   {
-    question: "Which kind of alcohol is Russia nooriously known for? ",
-    answer1: "Whiskey",
-    answer2: "Tequila",
-    answer3: "Vodka",
-    answer4: "Wine",
-    correct: "Vodka",
+    question: "Which of the following function of Array object sorts the elements of an array?",
+    answer1: "toSource()",
+    answer2: "sort()",
+    answer3: "oString()",
+    answer4: "unshift()",
+    correct: "sort",
   },
+ {question: "Which built-in method sorts the elements of an array?",
+  answer1: "changeOrder(order)",
+  answer2: "order()",
+  answer3: "sort()",
+  answer4: "None of the above.",
+  correct: "sort",
+},
+
+{question: "Which of the following is an advantage of using JavaScript?",
+answer1: "Less server interaction",
+answer2: "Immediate feedback to the visitors",
+answer3: "Increased interactivity",
+answer4: "All of the above.",
+correct: "All of the above",
+}
+,
+  {
+    question: "Which of the following is a valid type of function javascript supports?",
+    answer1: "named function",
+    answer2: "anonymous function",
+    answer3: "Both of the above.",
+    answer4: "None of the above.",
+    correct: "Both of the above.",
+  }
 ];
 
 function loadQuestion(){
-  console.log(quizDB[1])
+  console.log(quizDB[0])
 }
 
 loadQuestion()
