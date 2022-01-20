@@ -5,27 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <title>Js Quiz Time</title>
   </head>
   <body>
-    
     <h2 id="displayTimer"></h2>
-
     
+    <div id="start">start</div>
 
-    <div id="questions">
-<h1 id="q"></h1>
-     <button id="op1"></button>
-     <button id="op2"></button>
-     <button id="op3"></button>
-     <button id="op4"></button>
+    <div class="main-div">
+      <div class="inner-div">
+        <h1 class="question">Question Area </h1>
+        <ul>
+          <li>
+          <input type='radio' name='answer'id="an1" class="answer"></input>
+          <label for="ans1" id='option1'>answer option</label>
+        </li>
+          <li>
+          <input type='radio' name='answer'id="an2" class="answer"></input>
+          <label for="ans2" id='option2'>answer option</label>
+        </li>
+          <li>
+          <input type='radio' name='answer'id="an3" class="answer"></input>
+          <label for="ans3" id='option3'>answer option</label>
+        </li>
+          <li>
+          <input type='radio' name='answer'id="an4" class="answer"></input>
+          <label for="ans4" id='option4'>answer option</label>
+        </li>
+        </ul>
+        <button id="submit">Submit</button>
+        <div id='showScore' class="scoreArea">
+
+        </div>
+      </div>
+
+      
     </div>
-    <button id="myBtn">Start Quiz</button>
     <script src="./index.js"></script>
-
   </body>
 </html>
-
 
 <!-- GIVEN I am taking a code quiz
 WHEN I click the start button
