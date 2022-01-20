@@ -14,7 +14,7 @@
   background-color: #DDF0FD;
 }
 .inner-div{
-  width: 40vw;
+  width: 75vw;
   background-color:#fff;
   padding: 3rem 8rem;
   border-radius: 1rem;
@@ -30,6 +30,7 @@
   font-size: 25px;
   margin-top: 15px;
   list-style: none;
+  
 }
 
 #submit ,.btn{

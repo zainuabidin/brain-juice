@@ -7,11 +7,16 @@
 
 // Targeting each button in html to push the value from array object
 const question = document.querySelector(".question");
-const option1 = document.getElementById("#option1");
-const option2 = document.getElementById("#option2");
-const option3 = document.getElementById("#option3");
-const option4 = document.getElementById("#option4");
-const submit = document.getElementById("#submit");
+const option1 = document.querySelector("#option1");
+const option2 = document.querySelector("#option2");
+const option3 = document.querySelector("#option3");
+const option4 = document.querySelector("#option4");
+const submit = document.querySelector("#submit");
+
+// This is set a 0 to push the array object to next question
+let questionCount=0
+
+
 // on click the variable assigned to id will call the function tiMer to start the countdown
 // StartButton.addEventListener("click", tiMer);
 
@@ -38,13 +43,7 @@ const submit = document.getElementById("#submit");
 //   }
 // }
 
-// function displayQuestion() {
-//   q.textContent = questions[i].question;
-//   btn1.textContent = questions[i].answer1;
-//   btn2.textContent = questions[i].answer2;
-//   btn3.textContent = questions[i].answer3;
-//   btn4.textContent = questions[i].answer4;
-// }
+
 
 // function checkAnswer(answer){
 //   console.log('checkAnswer')
@@ -111,17 +110,18 @@ correct: "All of the above",
 ];
 
 function loadQuestion (){
-  question.innerText = quizDB[0].question
+  question.innerText = quizDB[questionCount].question
+  console.log(question.innerText)
+  option1.innerText = quizDB[questionCount].answer1
+  option2.innerText = quizDB[questionCount].answer2
+  option3.innerText = quizDB[questionCount].answer3
+  option4.innerText = quizDB[questionCount].answer4
   
   
 }
 
 loadQuestion()
-// <h1>Q 1 - Which of the following is true about variable naming conventions in JavaScript?</h1>
-// <h3>A - You should not use any of the JavaScript reserved keyword as variable name.</h3>
-// <h3>B - JavaScript variable names should not start with a numeral (0-9).</h3>
-// <h3>C - Both of the above.</h3>
-// <h3>D - None of the above</h3> //
+
 // function Q1() {
 //   var x = document.getElementById("firstQuestion");
 //   if (x.style.display === "none") {
@@ -132,7 +132,7 @@ loadQuestion()
 //   Q2()
 // }
 
-// unction Q2() {
+// function Q2() {
 //   var x = document.getElementById("secondQuestion");
 //   if (x.style.display === "none") {
 //     x.style.display = "block";
