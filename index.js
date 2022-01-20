@@ -6,12 +6,12 @@
 
 
 // Targeting each button in html to push the value from array object
-const question = document.getElementsByClassName("question");
-const option1 = document.getElementById("option1");
-const option2 = document.getElementById("option2");
-const option3 = document.getElementById("option3");
-const option4 = document.getElementById("option4");
-const submit = document.getElementById("submit");
+const question = document.querySelector(".question");
+const option1 = document.getElementById("#option1");
+const option2 = document.getElementById("#option2");
+const option3 = document.getElementById("#option3");
+const option4 = document.getElementById("#option4");
+const submit = document.getElementById("#submit");
 // on click the variable assigned to id will call the function tiMer to start the countdown
 // StartButton.addEventListener("click", tiMer);
 
@@ -110,8 +110,10 @@ correct: "All of the above",
   }
 ];
 
-function loadQuestion(){
-  console.log(quizDB[0])
+function loadQuestion (){
+  question.innerText = quizDB[0].question
+  
+  
 }
 
 loadQuestion()
@@ -137,15 +139,3 @@ loadQuestion()
 //   } else {
 //     x.style.display = "block";
 //   }
-
-// // GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and my score//
