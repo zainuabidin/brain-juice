@@ -12,6 +12,9 @@ const option2 = document.querySelector("#option2");
 const option3 = document.querySelector("#option3");
 const option4 = document.querySelector("#option4");
 const submit = document.querySelector("#submit");
+const answers =document.querySelectorAll('.answer')
+
+
 
 // This is set a 0 to push the array object to next question
 let questionCount=0
@@ -73,7 +76,7 @@ const quizDB = [
     answer2: "get()",
     answer3: "pop()",
     answer4: "None of the above.",
-    correct: "pop",
+    correct: "ans3",
   },
   {
     question: "Which of the following function of Array object sorts the elements of an array?",
@@ -81,14 +84,14 @@ const quizDB = [
     answer2: "sort()",
     answer3: "oString()",
     answer4: "unshift()",
-    correct: "sort",
+    correct: "ans2",
   },
  {question: "Which built-in method sorts the elements of an array?",
   answer1: "changeOrder(order)",
   answer2: "order()",
   answer3: "sort()",
   answer4: "None of the above.",
-  correct: "sort",
+  correct: "ans3",
 },
 
 {question: "Which of the following is an advantage of using JavaScript?",
@@ -96,7 +99,7 @@ answer1: "Less server interaction",
 answer2: "Immediate feedback to the visitors",
 answer3: "Increased interactivity",
 answer4: "All of the above.",
-correct: "All of the above",
+correct: "ans4",
 }
 ,
   {
@@ -105,22 +108,46 @@ correct: "All of the above",
     answer2: "anonymous function",
     answer3: "Both of the above.",
     answer4: "None of the above.",
-    correct: "Both of the above.",
+    correct: "ans3",
   }
 ];
 
 function loadQuestion (){
   question.innerText = quizDB[questionCount].question
-  console.log(question.innerText)
   option1.innerText = quizDB[questionCount].answer1
   option2.innerText = quizDB[questionCount].answer2
   option3.innerText = quizDB[questionCount].answer3
   option4.innerText = quizDB[questionCount].answer4
-  
+ 
   
 }
-
 loadQuestion()
+
+function getCheckAnswer(){
+
+ let answer;
+ answers.forEach((curAnsElem) => {
+   if (curAnsElem.checked) {
+     answer=curAnsElem.id
+     console.log(answer)
+     
+   }
+   return answer
+   
+ });
+
+  
+
+
+}
+ 
+
+// when user click on submit button after selecting an answer function is invoked to check answer
+submit.addEventListener('click' ,function(){
+  const checkedAnswer=getCheckAnswer()
+  console.log(checkedAnswer)
+})
+
 
 // function Q1() {
 //   var x = document.getElementById("firstQuestion");
