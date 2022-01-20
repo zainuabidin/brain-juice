@@ -1,13 +1,9 @@
 // assigning a variable to store the value of the id attached with start button
 
 // assigning a variable to store the value of the id to display the timer
-const displayTimer = document.getElementById("displayTimer");
+// c  
 
-// assigning variable to target the div with id="question" and hiding the div
-const questionContainer = document.getElementById("questions");
-questionContainer.style.display = "none";
 
-let i = 0;
 
 // Targeting each button in html to push the value from array object
 const question = document.getElementsByClassName("question");
@@ -17,7 +13,7 @@ const option3 = document.getElementById("option3");
 const option4 = document.getElementById("option4");
 const submit = document.getElementById("submit");
 // on click the variable assigned to id will call the function tiMer to start the countdown
-StartButton.addEventListener("click", tiMer);
+// StartButton.addEventListener("click", tiMer);
 
 // // this function will trigger the countdown and also change the questionContainer display property from none to block
 // function tiMer() {
@@ -71,7 +67,7 @@ StartButton.addEventListener("click", tiMer);
 
 
 // Array of object with question and answer
-const questions = [
+const quizDB = [
   {
     question: "Which country produces the most coffee in the world? ",
     answer1: "Etiopia",
@@ -90,6 +86,11 @@ const questions = [
   },
 ];
 
+function loadQuestion(){
+  console.log(quizDB[1])
+}
+
+loadQuestion()
 // <h1>Q 1 - Which of the following is true about variable naming conventions in JavaScript?</h1>
 // <h3>A - You should not use any of the JavaScript reserved keyword as variable name.</h3>
 // <h3>B - JavaScript variable names should not start with a numeral (0-9).</h3>
