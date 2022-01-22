@@ -17,6 +17,8 @@ let time = 60;
 
 submit.style.display = "none";
 questionContainer.style.display = "none";
+displayTimer.style.display="none"
+
 
 // Array of object with question and answer
 const quizDB = [
@@ -92,9 +94,13 @@ submit.addEventListener("click", function () {
   if (checkedAnswer === quizDB[questionCount].ans) score++;
   console.log(score);
   questionCount++;
+  
   if (questionCount < quizDB.length) {
     loadQuestion();
-  } else {
+  }
+
+  
+  else {
     showScore.innerHTML = `<h3> You Scored ${score}/${quizDB.length}<h3>
     <button class='btn' onclick='location.reload'>Play Again</button>
     `;
@@ -103,6 +109,8 @@ submit.addEventListener("click", function () {
     showScore.classList.remove("scoreArea");
     submit.style.display = "none";
     questionContainer.style.display = "none";
+    displayTimer.style.display="none"
+
   }
 
 });
@@ -113,8 +121,9 @@ start.addEventListener("click", function () {
   gameRules.style.display = "none";
   submit.style.display = "block";
   questionContainer.style.display = "block";
+  displayTimer.style.display="block"
   loadQuestion();
-  //   tiMer();
+    tiMer();
 });
 
 function tiMer() {
@@ -127,5 +136,10 @@ function tiMer() {
       clearInterval(intervalTime);
       displayTimer.textContent = "";
     }
+    if (checkedAnswer !== quizDB) {
+      time= time - 10
+    }
+    
+    
   }
 }
