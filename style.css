@@ -60,3 +60,29 @@
 .scoreArea{
   display: none;
 }
+#start{
+  padding:10px 3rem;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+
+}
+
+#gameRules{
+  width: 75vw;
+  background-color:#fff;
+  padding: 3rem 8rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0,0,0,0.4);
+  font-size: 28px;
+ 
+
+  
+}
+#gameRules li {
+margin: 10px 0 20px 0;
+list-style: none;
+
+}
+ 
